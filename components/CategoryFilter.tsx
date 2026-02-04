@@ -20,7 +20,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ selectedCategory, onSel
               ${
                 selectedCategory === cat.id
                   ? 'bg-emerald-600 text-white border-emerald-600 shadow-md transform scale-105'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-emerald-400 hover:text-emerald-600'
+                  : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400'
               }
             `}
           >

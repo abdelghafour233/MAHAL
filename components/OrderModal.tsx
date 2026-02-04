@@ -67,7 +67,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ product, isOpen, onClose }) => 
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity duration-300">
-      <div className="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
+      <div className="bg-white dark:bg-gray-800 w-full max-w-md rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up transition-colors duration-300">
         
         {/* Modal Header */}
         <div className="bg-emerald-600 p-4 flex justify-between items-center text-white">
@@ -80,18 +80,18 @@ const OrderModal: React.FC<OrderModalProps> = ({ product, isOpen, onClose }) => 
         </div>
 
         {/* Product Summary */}
-        <div className="p-4 bg-emerald-50 border-b border-emerald-100 flex gap-4 items-center">
-          <img src={product.image} alt={product.name} className="w-16 h-16 rounded-lg object-cover border border-emerald-200" />
+        <div className="p-4 bg-emerald-50 dark:bg-gray-700/50 border-b border-emerald-100 dark:border-gray-600 flex gap-4 items-center">
+          <img src={product.image} alt={product.name} className="w-16 h-16 rounded-lg object-cover border border-emerald-200 dark:border-gray-600" />
           <div>
-            <h3 className="font-bold text-gray-800 text-sm">{product.name}</h3>
-            <p className="text-emerald-700 font-bold">{product.price} درهم</p>
+            <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm">{product.name}</h3>
+            <p className="text-emerald-700 dark:text-emerald-400 font-bold">{product.price} درهم</p>
           </div>
         </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           <div className="space-y-1">
-            <label className="text-sm font-semibold text-gray-600">الاسم الكامل</label>
+            <label className="text-sm font-semibold text-gray-600 dark:text-gray-300">الاسم الكامل</label>
             <div className="relative">
               <User className="absolute right-3 top-3 text-gray-400" size={18} />
               <input
@@ -101,13 +101,13 @@ const OrderModal: React.FC<OrderModalProps> = ({ product, isOpen, onClose }) => 
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="أدخل اسمك الكامل"
-                className="w-full pr-10 pl-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                className="w-full pr-10 pl-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all bg-white dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               />
             </div>
           </div>
 
           <div className="space-y-1">
-            <label className="text-sm font-semibold text-gray-600">المدينة</label>
+            <label className="text-sm font-semibold text-gray-600 dark:text-gray-300">المدينة</label>
             <div className="relative">
               <MapPin className="absolute right-3 top-3 text-gray-400" size={18} />
               <input
@@ -117,13 +117,13 @@ const OrderModal: React.FC<OrderModalProps> = ({ product, isOpen, onClose }) => 
                 value={formData.city}
                 onChange={handleChange}
                 placeholder="الدار البيضاء، الرباط..."
-                className="w-full pr-10 pl-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                className="w-full pr-10 pl-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all bg-white dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               />
             </div>
           </div>
 
           <div className="space-y-1">
-            <label className="text-sm font-semibold text-gray-600">رقم الهاتف</label>
+            <label className="text-sm font-semibold text-gray-600 dark:text-gray-300">رقم الهاتف</label>
             <div className="relative">
               <Phone className="absolute right-3 top-3 text-gray-400" size={18} />
               <input
@@ -134,19 +134,19 @@ const OrderModal: React.FC<OrderModalProps> = ({ product, isOpen, onClose }) => 
                 onChange={handleChange}
                 placeholder="06XXXXXXXX"
                 dir="ltr"
-                className="w-full pr-10 pl-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-right"
+                className="w-full pr-10 pl-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-right bg-white dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               />
             </div>
           </div>
 
           <div className="pt-4">
-            <div className="bg-yellow-50 text-yellow-800 text-xs p-3 rounded-lg mb-4 text-center border border-yellow-200">
+            <div className="bg-yellow-50 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 text-xs p-3 rounded-lg mb-4 text-center border border-yellow-200 dark:border-yellow-800/50">
               🚚 الدفع نقداً عند الاستلام - التوصيل متوفر لجميع المدن
             </div>
             
             <button
               type="submit"
-              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg shadow-emerald-200 flex items-center justify-center gap-2 transition-all active:scale-95"
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg shadow-emerald-200 dark:shadow-none flex items-center justify-center gap-2 transition-all active:scale-95"
             >
               <span>أرسل الطلب عبر واتساب</span>
               <Send size={18} />

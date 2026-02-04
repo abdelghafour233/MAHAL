@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Category, Product } from './types';
 import { PRODUCTS } from './constants';
 import Header from './components/Header';
@@ -11,6 +11,21 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<Category>('all');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Toggle Dark Mode
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  // Apply Dark Mode class to html element
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   // Filter products based on selection
   const filteredProducts = useMemo(() => {
@@ -25,16 +40,15 @@ function App() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    // Add a small delay to clearing the product to prevent visual flicker during modal fade out
     setTimeout(() => setSelectedProduct(null), 300);
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
       <main className="flex-grow container mx-auto px-4 py-6">
-        {/* Hero / Banner Area (Simple text for now) */}
+        {/* Hero / Banner Area */}
         <div className="bg-gradient-to-l from-emerald-600 to-emerald-800 rounded-3xl p-8 mb-8 text-white text-center shadow-lg">
           <h2 className="text-3xl font-bold mb-2">عروض حصرية لهذا الموسم</h2>
           <p className="text-emerald-100 mb-6">توصيل سريع 🚚 والدفع عند الاستلام 💵</p>
@@ -50,7 +64,7 @@ function App() {
         </div>
 
         {/* Categories */}
-        <div className="mb-6 sticky top-[73px] z-40 bg-gray-50/95 backdrop-blur-sm py-2 -mx-4 px-4 border-b border-gray-200/50">
+        <div className="mb-6 sticky top-[73px] z-40 bg-gray-50/95 dark:bg-gray-900/95 backdrop-blur-sm py-2 -mx-4 px-4 border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
             <CategoryFilter 
             selectedCategory={selectedCategory} 
             onSelectCategory={setSelectedCategory} 
@@ -70,7 +84,7 @@ function App() {
             </div>
 
             {filteredProducts.length === 0 && (
-            <div className="text-center py-20 text-gray-500">
+            <div className="text-center py-20 text-gray-500 dark:text-gray-400">
                 <p>لا توجد منتجات في هذا التصنيف حالياً.</p>
             </div>
             )}
