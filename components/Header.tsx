@@ -12,7 +12,7 @@ const Header: React.FC = () => {
             <ShoppingBag size={24} />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 leading-none">متجري</h1>
+            <h1 className="text-2xl font-bold text-gray-900 leading-none">MATJARUNA</h1>
             <p className="text-xs text-emerald-600 font-medium">أفضل جودة، أفضل سعر</p>
           </div>
         </div>
