@@ -1,6 +1,6 @@
 import { Product, Category } from './types';
 
-export const PHONE_NUMBER = "212600000000"; 
+export const PHONE_NUMBER = "212684037010"; 
 
 export const CATEGORIES: { id: Category; label: string }[] = [
   { id: 'all', label: 'الكل' },
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     name: "كيكة مناسبات خاصة",
     price: 600,
     category: "birthdays",
-    image: "https://images.unsplash.com/photo-1588195538326-c5f1f9fa478f?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1602351447937-745cb720612f?auto=format&fit=crop&q=80&w=800",
     description: "كيك حسب الطلب (Layers Cake) بنكهات مختلفة وتزيين احترافي.",
   },
 
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     name: "كراء خيمة وجلسة تقليدية",
     price: 5000,
     category: "decoration",
-    image: "https://images.unsplash.com/photo-1590076215667-875d4ef2d7ee?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1535025911355-3a72d7fc7b16?auto=format&fit=crop&q=80&w=800",
     description: "خيمة راقية مع الصالون المغربي، الزرابي، والموائد للمناسبات الكبيرة.",
   },
   {

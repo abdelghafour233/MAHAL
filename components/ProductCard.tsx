@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Product } from '../types';
-import { CalendarCheck, ImageOff } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -51,10 +51,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onBuy }) => {
           
           <button
             onClick={() => onBuy(product)}
-            className="bg-gray-900 dark:bg-gray-700 hover:bg-emerald-600 dark:hover:bg-emerald-600 text-white py-2 px-4 rounded-xl font-bold text-sm transition-colors duration-200 flex items-center justify-center gap-2 active:scale-95"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-4 rounded-xl font-bold text-sm transition-colors duration-200 flex items-center justify-center gap-2 active:scale-95 shadow-md shadow-emerald-200 dark:shadow-none"
           >
-            <span>احجز الآن</span>
-            <CalendarCheck size={16} />
+            <span>اطلب عبر واتساب</span>
+            <MessageCircle size={18} />
           </button>
         </div>
       </div>
