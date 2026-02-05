@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Product } from '../types';
-import { CalendarCheck } from 'lucide-react';
+import { CalendarCheck, ImageOff } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -8,15 +8,19 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onBuy }) => {
+  const [imageError, setImageError] = useState(false);
+  const fallbackImage = "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"; // Elegant event placeholder
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group">
       {/* Image Container */}
       <div className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
         <img
-          src={product.image}
+          src={imageError ? fallbackImage : product.image}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
+          onError={() => setImageError(true)}
         />
         <div className="absolute top-2 right-2 bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded-md shadow-sm">
           متاح

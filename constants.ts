@@ -17,7 +17,7 @@ export const PRODUCTS: Product[] = [
     name: "باك العرس الملكي الفاخر",
     price: 45000,
     category: "weddings",
-    image: "https://images.unsplash.com/photo-1580820719890-449eb724b918?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800",
     description: "تجهيز شامل: نكافة، جوق، عمارية، وتزيين القاعة بأحدث الصيحات مع طقوس الحناء التقليدية.",
   },
   {
@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     name: "حفل خطوبة راقي",
     price: 15000,
     category: "weddings",
-    image: "https://images.unsplash.com/photo-1605218427368-2b810d7a0499?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800",
     description: "تنظيم حفل خطوبة متكامل مع قفطان مغربي فاخر وبوفيه حلويات ومشروبات راقية.",
   },
 
@@ -35,7 +35,7 @@ export const PRODUCTS: Product[] = [
     name: "بسطيلة مغربية (فواكه البحر)",
     price: 450,
     category: "catering",
-    image: "https://images.unsplash.com/photo-1606443425578-43d9972828b1?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
     description: "بسطيلة هماوية بفواكه البحر الطازجة والورقة المقرمشة، تكفي 10-12 شخص.",
   },
   {
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     name: "طاجين اللحم بالبرقوق / مشوي",
     price: 2500,
     category: "catering",
-    image: "https://images.unsplash.com/photo-1511690656952-34342d222e38?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&q=80&w=800",
     description: "أطباق مغربية أصيلة: طاجين اللحم بالبرقوق واللوز أو خروف مشوي في الفرن.",
   },
   {
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
     name: "بوفيه شاي وحلويات مغربية",
     price: 3500,
     category: "catering",
-    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800",
     description: "تشكيلة كعب غزال، بريوات، وحلويات دواز أتاي مع الشاي المغربي المنعنع.",
   },
 
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     name: "حفل عيد ميلاد أطفال",
     price: 2000,
     category: "birthdays",
-    image: "https://images.unsplash.com/photo-1530103862676-de3c9a59af38?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1464349153912-d0464e79ea9e?auto=format&fit=crop&q=80&w=800",
     description: "كيك ديزاين، تنشيط (بهلوان)، وتزيين المكان بالبالونات.",
   },
   {
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     name: "كيكة مناسبات خاصة",
     price: 600,
     category: "birthdays",
-    image: "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1588195538326-c5f1f9fa478f?auto=format&fit=crop&q=80&w=800",
     description: "كيك حسب الطلب (Layers Cake) بنكهات مختلفة وتزيين احترافي.",
   },
 
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     name: "كراء خيمة وجلسة تقليدية",
     price: 5000,
     category: "decoration",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1590076215667-875d4ef2d7ee?auto=format&fit=crop&q=80&w=800",
     description: "خيمة راقية مع الصالون المغربي، الزرابي، والموائد للمناسبات الكبيرة.",
   },
   {
@@ -87,7 +87,7 @@ export const PRODUCTS: Product[] = [
     name: "ديكور طاولات (فناير وورود)",
     price: 1500,
     category: "decoration",
-    image: "https://images.unsplash.com/photo-1549488497-6031cd84e517?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1519225448526-0c914e13f6d5?auto=format&fit=crop&q=80&w=800",
     description: "تزيين بالفوانيس المغربية، سنتربيس، ورود طبيعية، وأواني فضية لكل طاولة.",
   },
   {
