@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Phone, Moon, Sun } from 'lucide-react';
+import { UtensilsCrossed, Phone, Moon, Sun } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 
 interface HeaderProps {
@@ -14,11 +14,11 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <div className="bg-emerald-600 p-2 rounded-lg text-white">
-            <ShoppingBag size={24} />
+            <UtensilsCrossed size={24} />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-none transition-colors">MATJARUNA</h1>
-            <p className="text-xs text-emerald-600 font-medium">أفضل جودة، أفضل سعر</p>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white leading-none transition-colors">AFRAHUNA</h1>
+            <p className="text-xs text-emerald-600 font-medium">ممون الحفلات الأول</p>
           </div>
         </div>
 

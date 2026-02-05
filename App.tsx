@@ -49,18 +49,23 @@ function App() {
 
       <main className="flex-grow container mx-auto px-4 py-6">
         {/* Hero / Banner Area */}
-        <div className="bg-gradient-to-l from-emerald-600 to-emerald-800 rounded-3xl p-8 mb-8 text-white text-center shadow-lg">
-          <h2 className="text-3xl font-bold mb-2">عروض حصرية لهذا الموسم</h2>
-          <p className="text-emerald-100 mb-6">توصيل سريع 🚚 والدفع عند الاستلام 💵</p>
-          <button 
-            onClick={() => {
-                const element = document.getElementById('products-grid');
-                element?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="bg-white text-emerald-800 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition-colors"
-          >
-            تسوق الآن
-          </button>
+        <div className="bg-gradient-to-r from-emerald-800 to-emerald-600 dark:from-emerald-900 dark:to-emerald-800 rounded-3xl p-10 mb-8 text-white text-center shadow-xl relative overflow-hidden">
+          {/* Decorative pattern overlay could go here */}
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">اجعل مناسبتك لا تُنسى</h2>
+            <p className="text-emerald-100 mb-8 text-lg max-w-2xl mx-auto">
+              نقدم لك أفضل خدمات التريتور وتنظيم الحفلات في المغرب. جودة عالية، مذاق أصيل، وخدمة احترافية لكل مناسباتكم السعيدة.
+            </p>
+            <button 
+                onClick={() => {
+                    const element = document.getElementById('products-grid');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-white text-emerald-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg"
+            >
+                اكتشف عروضنا
+            </button>
+          </div>
         </div>
 
         {/* Categories */}
@@ -85,7 +90,7 @@ function App() {
 
             {filteredProducts.length === 0 && (
             <div className="text-center py-20 text-gray-500 dark:text-gray-400">
-                <p>لا توجد منتجات في هذا التصنيف حالياً.</p>
+                <p>لا توجد عروض في هذا التصنيف حالياً.</p>
             </div>
             )}
         </div>
