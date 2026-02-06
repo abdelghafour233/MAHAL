@@ -6,6 +6,7 @@ import CategoryFilter from './components/CategoryFilter';
 import ProductCard from './components/ProductCard';
 import OrderModal from './components/OrderModal';
 import Footer from './components/Footer';
+import { Moon, Sun } from 'lucide-react';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState<Category>('all');
@@ -44,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300 relative">
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
       <main className="flex-grow container mx-auto px-4 py-6">
@@ -103,6 +104,17 @@ function App() {
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
       />
+
+      {/* Floating Dark Mode Button */}
+      <div className="fixed bottom-6 left-6 z-50">
+        <button
+          onClick={toggleDarkMode}
+          className="bg-gray-800 dark:bg-white text-white dark:text-gray-900 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-200 border border-gray-700 dark:border-gray-200 flex items-center justify-center"
+          aria-label="تبديل الوضع الليلي"
+        >
+          {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
+        </button>
+      </div>
     </div>
   );
 }
